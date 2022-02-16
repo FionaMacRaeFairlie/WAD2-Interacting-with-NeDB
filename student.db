@@ -1,0 +1,9 @@
+{"student":"Ross","age":20,"programme":"Software Development","modules":[{"name":"Programming","grade":62},{"name":"Web Development","grade":57},{"name":"Software Engineering","grade":73}],"_id":"3d4bnhUS4TRkjcGD"}
+{"student":"Ed","age":20,"programme":"Software Development","modules":[{"name":"Programming","grade":40},{"name":"Web Development","grade":54},{"name":"Software Engineering","grade":63}],"_id":"Njptx0wmqBK1ofCc"}
+{"student":"Ann","age":20,"programme":"Computing","modules":[{"name":"Programming","grade":57},{"name":"Web Development","grade":70},{"name":"Software Engineering","grade":59}],"_id":"r9Ki8bnRdecxVoB4"}
+{"student":"Ali","age":23,"programme":"Software Development","modules":[{"name":"Programming","grade":36},{"name":"Application Architectures","grade":36},{"name":"Software Engineering","grade":66}],"_id":"pOquy2LmIVBdi2zH"}
+{"student":"Fred","age":20,"programme":"Software Development","modules":[{"name":"Programming","grade":78},{"name":"Application Architectures","grade":67},{"name":"Software Engineering","grade":69}],"_id":"5nHjIh0SnINnuOno"}
+{"student":"Colin","age":20,"programme":"Software Development","modules":[{"name":"Programming","grade":61},{"name":"Application Architectures","grade":42},{"name":"Software Engineering","grade":70}],"_id":"cqTg9yNcgjeZISXv"}
+{"student":"Ross","age":24,"programme":"Software Development","modules":[{"name":"Programming","grade":62},{"name":"Web Development","grade":57},{"name":"Software Engineering","grade":73}],"_id":"3d4bnhUS4TRkjcGD"}
+{"$$deleted":true,"_id":"Njptx0wmqBK1ofCc"}
+{"student":"Fred","age":20,"programme":"Software Development","modules":[{"name":"Programming","grade":78},{"name":"Application Architectures","grade":67},{"name":"Software Engineering","grade":69},{"name":"Web Development","grade":67}],"_id":"5nHjIh0SnINnuOno"}

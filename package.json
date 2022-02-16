@@ -1,0 +1,22 @@
+{
+  "name": "wad2lab3c",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FionaMacRaeFairlie/WAD2Lab3c.git"
+  },
+  "author": "Fiona Fairlie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FionaMacRaeFairlie/WAD2Lab3c/issues"
+  },
+  "homepage": "https://github.com/FionaMacRaeFairlie/WAD2Lab3c#readme",
+  "dependencies": {
+    "nedb": "^1.8.0"
+  }
+}
