@@ -1,9 +1,10 @@
-const nedb= require('nedb');
+const nedb = require("nedb");
 
-const db= new nedb({filename:'student.db', autoload:true});
-console.log('db created');
-console.log('**************************************************************************************');
-console.log('**************************************************************************************');
+const db = new nedb({ filename: "student.db", autoload: true });
+console.log("db created");
+console.log(
+  "***********************************"
+);
 
 db.insert({ student:'Ross',
             age:20,
@@ -21,14 +22,14 @@ db.insert({ student:'Ross',
                         grade: 73
                     }
                 ]
-                
+
             }, function(err, newDoc){
                 if(err) {
                     console.log('error',err);
                 } else {
                     console.log('document inserted',newDoc);
                 }
- }); 
+ });
  db.insert({ student:'Ed',
             age:20,
             programme:'Software Development',
@@ -45,7 +46,7 @@ db.insert({ student:'Ross',
                         grade: 63
                     }
                 ]
-                
+
             }, function(err, newDoc){
                 if(err) {
                     console.log('error',err);
@@ -69,14 +70,14 @@ db.insert({ student:'Ross',
                         grade: 59
                     }
                 ]
-                
+
             }, function(err, newDoc){
                 if(err) {
                     console.log('error',err);
                 } else {
                     console.log('document inserted',newDoc);
                 }
- }); 
+ });
  db.insert({ student:'Ali',
             age:23,
             programme:'Software Development',
@@ -93,7 +94,7 @@ db.insert({ student:'Ross',
                         grade: 66
                     }
                 ]
-                
+
             }, function(err, newDoc){
                 if(err) {
                     console.log('error',err);
@@ -117,7 +118,7 @@ db.insert({ student:'Ross',
                         grade: 69
                     }
                 ]
-                
+
             }, function(err, newDoc){
                 if(err) {
                     console.log('error',err);
@@ -141,7 +142,7 @@ db.insert({ student:'Ross',
                         grade: 70
                     }
                 ]
-                
+
             }, function(err, newDoc){
                 if(err) {
                     console.log('error',err);
@@ -150,19 +151,32 @@ db.insert({ student:'Ross',
                 }
  });
 
-db.find({'modules.name':'Web Development'},function(err,docs){
-    if(err){
-        console.log('error');
-    }else{ console.log('Web Development: ',docs);
-    }
-})
+db.find({ "modules.name": "Web Development" }, function (err, docs) {
+  if (err) {
+    console.log("error");
+  } else {
+    console.log("Web Development class list: ");
+    docs.forEach(function (doc) {
+      console.log(doc.student,":",doc.programme);
+    });
+  }
+});
 
-db.find({'programme':'Computing', 'modules.grade':70},function(err,docs){
-    if(err){
-        console.log('error');
-    }else{ console.log('Computing students with grade of 70 in any module: ',docs);
-    }
-})
+db.find({ programme: "Computing", "modules.grade": 70 }, function (err, docs) {
+  if (err) {
+    console.log("error");
+  } else {
+    console.log("Computing students with grade of 70 in any module: ", docs); // note: trying this without using a loop reults in output being incorrectly formatted
+    docs.forEach(function (d) {
+      console.log("User:", d.student);
+      d.modules.forEach(function (moduleTaken) {
+        if (moduleTaken.grade == 70) {
+          console.log("Subject with mark of 70%:", moduleTaken.name);
+        }
+      });
+    });
+  }
+});
 
 db.find({ 'modules.grade': { $lt: 50 }}, function(err, docs) {
     console.log('Students with low marks');
